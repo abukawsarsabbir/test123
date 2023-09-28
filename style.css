@@ -1,0 +1,137 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-color: gray;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.wrap {
+    background-color: #fff;
+    width: 500px;
+
+    padding: 30px 20px;
+}
+
+.form-group input {
+    display: block;
+    width: 100%;
+    padding: 10px 5px;
+    margin: 10px 0px;
+}
+button {
+    outline: none;
+    border: none;
+    padding: 18px 36px;
+    background-color: pink;
+    font-size: 18px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    
+}
+
+.container {
+    background: yellow;
+    flex-wrap: wrap;
+    /* height: 400px; */
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #000;
+    margin: 10px 10px;
+}
+/* .item:nth-child(2){
+    flex-basis: 2;
+    background-color: pink;
+} */
+
+@media (max-with:600px){
+    .item:nth-child(2){
+        order: 1;
+    }
+    .item:nth-child(1){
+        order: 2'
+    }
+    .item:nth-child(3){
+        order: 3;
+    }
+}
+
+/* .floats {
+    content: "";
+    clear: both;
+    display: table;
+    background-color: #fff;
+}
+.item-1 {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    float: left;
+    
+}
+.item-2 {
+    width: 250px;
+    height: 200px;
+    background-color: green;
+    float: right;
+
+} */
+.floats::after {
+    content: "";
+    clear: both;
+    display: table;
+    overflow: hidden;
+    
+}
+.cont {
+    margin-left:  auto;
+    margin-right:  auto;
+    width: 60%;
+}
+.floats{
+    margin-left: -20px;
+    margin-right: -20px;
+    
+}
+.item-1 {
+    width: calc(50% - 40px);
+    height: 200px;
+    background-color: red;
+    float: right;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+.item-2 {
+    width: calc(50% - 40px);
+    height: 200px;
+    background-color: green;
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+@media (max-width: 600px) {
+    .item-1,
+    .item-2  {
+        float: none;
+        display: block;
+        width: 100%;
+        
+    }
+
+}
